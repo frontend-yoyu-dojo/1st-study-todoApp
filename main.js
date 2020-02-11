@@ -34,7 +34,8 @@ const addTodoItem = title => {
   let todoItems = getTodoItems();
 
   const todoItem = {
-    title
+    title,
+    done: false
   };
 
   todoItems.push(todoItem);
@@ -43,11 +44,12 @@ const addTodoItem = title => {
   todoItemsRenderer();
 };
 
-const updateTodoItem = (index, title) => {
+const updateTodoItem = (index, title, done = false) => {
   let todoItems = getTodoItems();
 
   const todoItem = {
-    title
+    title,
+    done
   };
   todoItems[index] = todoItem;
 
@@ -95,6 +97,11 @@ const editValue = index => {
   const targetInput = document.getElementById(`js-editTask${index}`);
   updateTodoItem(index, targetInput.value);
   targetInput.value = "";
+};
+
+const done = index => {
+  const title = getTodoItem(index).title;
+  updateTodoItem(index, title, true);
 };
 
 const renderForm = index => {
