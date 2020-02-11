@@ -1,1 +1,5 @@
-# 1st-study-todoApp
+# 課題
+
+## CRAD
+
+- 他のものを localStrage に格納する可能性を加味したらとんでもないことになった。
