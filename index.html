@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css"
+    />
+    <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <title>TODO APP</title>
+  </head>
+  <body>
+    <header class="l-header l-bottom-large">
+      <section class="hero is-primary">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title text-center">
+              TODO APP
+            </h1>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main class="l-main">
+      <div class="container is-fluid">
+        <div class="columns l-bottom">
+          <div class="column is-four-fifths">
+            <input
+              id="js-input"
+              class="input is-rounded"
+              type="text"
+              placeholder="タスク名"
+            />
+          </div>
+          <div class="column">
+            <button
+              class="button is-primary is-rounded is-fullwidth text-center"
+              onclick="addValue()"
+            >
+              タスクを追加
+            </button>
+          </div>
+        </div>
+        <div id="js-renderTodo"></div>
+      </div>
+    </main>
+    <footer class="l-footer footer">
+      <div class="content has-text-centered">
+        <p>
+          &copy; frontend yoyu dojo
+        </p>
+      </div>
+    </footer>
+    <script type="text/javascript" src="./main.js"></script>
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      .l-footer {
+        margin-top: 20px;
+      }
+
+      .l-main {
+        flex-grow: 1;
+      }
+
+      .l-bottom-small {
+        margin-bottom: 10px;
+      }
+
+      .l-bottom-small {
+        margin-bottom: 15px;
+      }
+
+      .l-bottom {
+        margin-bottom: 20px;
+      }
+
+      .l-bottom-large {
+        margin-bottom: 25px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .task-container {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .task-title {
+        flex-grow: 1;
+      }
+
+      .task-links {
+      }
+    </style>
+  </body>
+</html>
